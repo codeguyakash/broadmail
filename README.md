@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Bulk Email Sender
+
+This is a frontend application for a bulk email sender built with Next.js.
+
+## Live Demo
+
+Check out the live demo of the project [here](https://broadmail.codeguyakash.me).
+
+- https://broadmail.codeguyakash.me
+
+## Features
+
+- Sending Bulk Emails
+- Upload CSV file
+- file name should be <code> clients.csv </code> file
+
+### Example :
+
+- Also include email in the file
+
+<br/>
+<br/>
+
+file = clients.csv
+> email <br/>
+> theakashdeveloper@gmail.com <br/>
+> theakashdeveloper@gmail.com <br/>
+> theakashdeveloper@gmail.com <br/>
+> theakashdeveloper@gmail.com <br/>
+> theakashdeveloper@gmail.com
+<br/>
+<br/>
+
+
+## How to get App Password
+
+1. Make sure you have two-step verification enabled on your Gmail account. If not, enable it in your Google Account settings.
+
+2. Visit the Google Account management page: [https://myaccount.google.com/](https://myaccount.google.com/). or https://myaccount.google.com/security?hl=en
+
+3. Sign in to your Google Account.
+
+4. Go to "Security" in the left sidebar.
+
+5. Scroll down to "2-step verification" and click on it.
+
+6. Scroll further down to "App passwords" and click on it. You may need to re-enter your password for security.
+
+7. Enter a custom name for the App Password.
+
+8. Click "Create" to generate a unique 16-character App Password.
+
+9. Save the generated App Password securely as it won't be visible again.
+
+10. Replace your regular Gmail account password in your application code with this App Password.
 
 ## Getting Started
 
-First, run the development server:
+To get started with the project, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone the repository: `git clone <repository-url>`
+2. Install dependencies: `npm install`
+3. Start the development server: `npm run dev`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contributing
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## License
 
-## Learn More
+This project is licensed under the [MIT License](LICENSE).
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+For more info You can ping me on Twitter - <a href="https://twitter.com/codeguyakash">@codeguyakash</a>
