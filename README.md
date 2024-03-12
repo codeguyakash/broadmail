@@ -1,4 +1,4 @@
-# Frontend Bulk Email Sender
+# Bulk Email Sender
 
 This is a frontend application for a bulk email sender built with Next.js.
 
