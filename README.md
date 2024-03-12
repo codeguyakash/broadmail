@@ -23,11 +23,11 @@ Check out the live demo of the project [here](https://broadmail.codeguyakash.me)
 
 file = clients.csv
 > email <br/>
-> theakashdeveloper@gmail.com <br/>
-> theakashdeveloper@gmail.com <br/>
-> theakashdeveloper@gmail.com <br/>
-> theakashdeveloper@gmail.com <br/>
-> theakashdeveloper@gmail.com
+> example@gmail.com <br/>
+> example@gmail.com <br/>
+> example@gmail.com <br/>
+> example@gmail.com <br/>
+> example@gmail.com
 <br/>
 <br/>
 
