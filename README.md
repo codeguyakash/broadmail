@@ -62,12 +62,5 @@ To get started with the project, follow these steps:
 2. Install dependencies: `npm install`
 3. Start the development server: `npm run dev`
 
-## Contributing
-
-Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
+## Contact to Dev
 For more info You can ping me on Twitter - <a href="https://twitter.com/codeguyakash">@codeguyakash</a>
