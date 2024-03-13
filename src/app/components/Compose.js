@@ -1,8 +1,11 @@
 // "use client";
 import axios from "axios";
 import { useState } from "react";
+import Loader from "./Loader";
 
 export default function Compose() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState(" ");
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -17,6 +20,7 @@ export default function Compose() {
       setFormData({ ...formData, [e.target.name]: e.target.value });
     }
   };
+
   // console.log(process.env);
   const sendHandler = async (e) => {
     e.preventDefault();
@@ -27,17 +31,33 @@ export default function Compose() {
     formDataToSend.append("body", formData.body);
     formDataToSend.append("file", formData.file);
     try {
+      setIsLoading(true);
       axios
-        .post("https://broadmailer.onrender.com/send-emails", formData, {
+        .post("https://api-broadmail.codeguyakash.me/send-emails", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },
         })
-        .then((res) => console.log(res.data))
-        .catch((error) => console.log(error.message));
+        .then((res) => {
+          console.log(res.data.message);
+          setMessage(res.data.message);
+          setIsLoading(false);
+        })
+        .catch((error) => {
+          setMessage(error.message);
+          console.log(error.message);
+          setIsLoading(true);
+        });
     } catch (error) {
+      isLoading(true);
       console.error("Error:", error);
+      setMessage(error);
     }
+    console.log("before");
+    setTimeout(() => {
+      console.log("after");
+      setIsLoading(false);
+    }, 5000);
   };
   return (
     <main className="flex flex-col items-center w-[100%]">
@@ -80,18 +100,24 @@ export default function Compose() {
 
           <div className="border-2 border-dashed border-[#141414] rounded-md p-5">
             <input
-              className="text-1xl p-2 "
+              className="text-1xl text-center cursor-pointer"
               type="file"
               name="file"
               onChange={handleChange}
             />
+
+            <p className="text-[12px] text-[#909090] mt-1">
+              only .csv files are accepted
+            </p>
           </div>
+          <div className="mx-auto text-[12px] text-[#909090]">{message}</div>
           <button
-            className="bg-blue-600 text-1xl p-2 font-semibold rounded-md"
+            className="bg-white text-1xl text-black p-2 font-normal rounded-md"
             type="submit"
             onClick={sendHandler}
+            disabled={isLoading}
           >
-            SEND
+            {isLoading ? <Loader /> : "SEND"}
           </button>
         </form>
       </div>
