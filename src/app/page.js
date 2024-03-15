@@ -1,8 +1,8 @@
-import SignIn from "./components/SignIn";
+import HomePage from "./components/HomePage"
 export default function Home() {
   return (
     <main className="flex justify-center w-[100%] h-screen">
-      <SignIn />
+      <HomePage/>
     </main>
   );
 }

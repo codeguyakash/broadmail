@@ -5,7 +5,7 @@ import Provider from "./components/Provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "@mail Broadcast",
+  title: "Broadmail",
   description:
     "Streamline your email marketing with this comprehensive email broadcast project developed by @codeguyakash. Whether you need to send targeted newsletters, promotional blasts, or automated campaigns, this solution offers the features you need to reach your audience effectively.",
 };
@@ -13,7 +13,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <link rel="icon" href="https://nextjs.org/static/favicon/apple-touch-icon.png" sizes="any" />
+      <link
+        rel="icon"
+        href="https://nextjs.org/static/favicon/apple-touch-icon.png"
+        sizes="any"
+      />
       <body className={inter.className}>
         <Provider>{children}</Provider>
       </body>

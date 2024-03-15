@@ -33,7 +33,7 @@ export default function Compose() {
     try {
       setIsLoading(true);
       axios
-        .post("https://api-broadmail.codeguyakash.me/send-emails", formData, {
+        .post("http://localhost:3001/send-emails", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },
@@ -53,9 +53,8 @@ export default function Compose() {
       console.error("Error:", error);
       setMessage(error);
     }
-    console.log("before");
     setTimeout(() => {
-      console.log("after");
+      setMessage("");
       setIsLoading(false);
     }, 5000);
   };
