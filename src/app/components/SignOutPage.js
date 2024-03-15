@@ -29,6 +29,7 @@ const SignOutPage = ({ props }) => {
             <a
               className="font-bold text-[14px] text-blue-700"
               href="https://myaccount.google.com/security?hl=en"
+              target="_blank"
             >
               Get App-Password{" "}
             </a>
