@@ -3,7 +3,7 @@ import { signOut } from "next-auth/react";
 import Image from "next/image";
 import Compose from "./Compose";
 
-const SignOut = ({ props }) => {
+const SignOutPage = ({ props }) => {
   return (
     <div className="w-screen">
       <div className="my-3">
@@ -35,4 +35,4 @@ const SignOut = ({ props }) => {
   );
 };
 
-export default SignOut;
+export default SignOutPage;

@@ -1,14 +1,14 @@
 "use client";
 import { useSession } from "next-auth/react";
-import SignIn from "./SignIn";
-import SignOut from "./SignOut";
+import SignInPage from "./SignInPage";
+import SignOutPage from "./SignOutPage";
 
 const HomePage = () => {
   const { data: session } = useSession();
   if (session && session.user) {
-    return <SignOut props={session} />;
+    return <SignOutPage props={session} />;
   }
-  return <SignIn />;
+  return <SignInPage />;
 };
 
 export default HomePage;
