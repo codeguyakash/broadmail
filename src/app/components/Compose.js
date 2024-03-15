@@ -21,7 +21,6 @@ export default function Compose() {
     }
   };
 
-  // console.log(process.env);
   const sendHandler = async (e) => {
     e.preventDefault();
     const formDataToSend = new FormData();
@@ -33,7 +32,7 @@ export default function Compose() {
     try {
       setIsLoading(true);
       axios
-        .post("http://localhost:3001/send-emails", formData, {
+        .post("https://api-broadmail.codeguyakash.me/send-emails", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },
@@ -44,19 +43,19 @@ export default function Compose() {
           setIsLoading(false);
         })
         .catch((error) => {
-          setMessage(error.message);
-          console.log(error.message);
+          setMessage(error?.response?.data?.message);
+          console.log(error.response.data.message);
           setIsLoading(true);
         });
     } catch (error) {
       isLoading(true);
-      console.error("Error:", error);
+      console.log("Error:", error);
       setMessage(error);
     }
     setTimeout(() => {
       setMessage("");
       setIsLoading(false);
-    }, 5000);
+    }, 10000);
   };
   return (
     <main className="flex flex-col items-center w-[100%]">
@@ -69,10 +68,10 @@ export default function Compose() {
             name="email"
             onChange={handleChange}
             type="email"
-            placeholder="akash@codeguyakash.me"
+            placeholder="your-gmail@gmail.coom"
           />
           <input
-            className="text-1xl  bg-[#141414] p-2 rounded-md border-none"
+            className="text-1xl bg-[#141414] p-2 rounded-md border-none"
             type="password"
             value={formData.password}
             name="password"
@@ -96,7 +95,6 @@ export default function Compose() {
             name="body"
             onChange={handleChange}
           />
-
           <div className="border-2 border-dashed border-[#141414] rounded-md p-5">
             <input
               className="text-1xl text-center cursor-pointer"
@@ -104,8 +102,7 @@ export default function Compose() {
               name="file"
               onChange={handleChange}
             />
-
-            <p className="text-[12px] text-[#909090] mt-1">
+            <p className="text-[12px] text-[#909090] mt-2">
               only .csv files are accepted
             </p>
           </div>
