@@ -21,10 +21,18 @@ const SignOutPage = ({ props }) => {
               className="rounded-full"
             />
           </div>
-          <h1 className="md:text-3xl tracking-tight">
-            {props.user.name}
-            <span> &#183; </span>({props.user.email})
-          </h1>
+          <div>
+            <h1 className="md:text-3xl tracking-[-2px] font-bold">
+              {props.user.name}
+              <span> &#183; </span>({props.user.email})
+            </h1>
+            <a
+              className="font-bold text-[14px] text-blue-700"
+              href="https://myaccount.google.com/security?hl=en"
+            >
+              Get App-Password{" "}
+            </a>
+          </div>
           <button
             className="text-1xl border-[1px] border-[#141414] md:px-6 md:py-2 my-1 rounded-md"
             onClick={() => signOut()}

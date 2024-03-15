@@ -4,14 +4,14 @@ const Model = ({ setShowModel }) => {
   return (
     <div className="mx-auto mix-h-[600px] w-1/2 my-2 border border-[#141414] rounded-lg p-16">
       <div>
-        <div>
+        <div className="flex items-center justify-between">
+          <h2 className="text-3xl">How to get App Password</h2>
           <button
-            className="text-1xl border-[1px] border-[#141414] md:px-6 md:py-2 my-1 rounded-md"
+            className="text-1xl text-[#343434]"
             onClick={() => setShowModel(false)}
           >
-            close
+            X
           </button>
-          <h2 className="text-3xl">How to get App Password</h2>
         </div>
         <div className="px-14 my-2">
           <ol className="list-decimal pl-6 text-gray-400 font-light">
