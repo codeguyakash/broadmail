@@ -60,7 +60,7 @@ export default function Compose() {
   return (
     <main className="flex flex-col items-center w-[100%]">
       <div className="md:w-[50%] mx-5">
-        <form className="flex flex-col gap-5 p-10 border-2 border-[#141414] rounded-lg">
+        <form className="flex flex-col gap-5 p-10 my-2 border-2 border-[#141414] rounded-lg">
           <h1 className="text-3xl font-semibold">Send Bulk Email</h1>
           <input
             className="text-1xl  bg-[#141414] p-2 rounded-md border-none"

@@ -2,12 +2,16 @@
 import { signOut } from "next-auth/react";
 import Image from "next/image";
 import Compose from "./Compose";
+import Model from "./Model";
+import { useState } from "react";
+import Footer from "./Footer";
 
 const SignOutPage = ({ props }) => {
+  const [showModel, setShowModel] = useState(true);
   return (
-    <div className="w-screen">
-      <div className="my-3">
-        <div className="font-bold w-[100%] flex justify-around items-center md:gap-5 py-2">
+    <div className="w-screen ">
+      <div className="">
+        <div className="font-bold w-[100%] flex justify-around items-center md:gap-5 pt-2">
           <div>
             <Image
               src={props?.user?.image}
@@ -30,7 +34,8 @@ const SignOutPage = ({ props }) => {
         </div>
       </div>
       <div className="w-screen bg-green-500 mx-auto border-[1px] border-[#141414] my-4"></div>
-      <Compose />
+      {showModel ? <Model setShowModel={setShowModel} /> : <Compose />}
+      <Footer />
     </div>
   );
 };
