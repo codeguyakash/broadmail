@@ -2,18 +2,18 @@ import React from "react";
 
 const Model = ({ setShowModel }) => {
   return (
-    <div className="mx-auto mix-h-[600px] w-1/2 my-2 border border-[#141414] rounded-lg p-16">
+    <div className="mx-auto sm:max-w-[600px] lg:max-w-[800px] xl:max-w-[1000px] w-full sm:my-2 border border-[#141414] rounded-lg p-8 sm:p-16">
       <div>
         <div className="flex items-center justify-between">
           <h2 className="text-3xl">How to get App Password</h2>
           <button
-            className="text-1xl text-[#343434]"
+            className="text-2xl text-[#343434]"
             onClick={() => setShowModel(false)}
           >
             X
           </button>
         </div>
-        <div className="px-14 my-2">
+        <div className="px-4 sm:px-14 my-2">
           <ol className="list-decimal pl-6 text-gray-400 font-light">
             <li className="mb-2">
               Make sure you have two-step verification enabled on your Gmail
@@ -24,6 +24,7 @@ const Model = ({ setShowModel }) => {
               <a
                 href="https://myaccount.google.com/"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="text-blue-500 underline"
               >
                 https://myaccount.google.com/
@@ -33,6 +34,7 @@ const Model = ({ setShowModel }) => {
               <a
                 href="https://myaccount.google.com/security?hl=en"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="text-blue-500 underline"
               >
                 https://myaccount.google.com/security?hl=en
@@ -67,3 +69,4 @@ const Model = ({ setShowModel }) => {
 };
 
 export default Model;
+  
