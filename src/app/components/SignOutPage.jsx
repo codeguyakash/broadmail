@@ -8,6 +8,7 @@ import Footer from "./Footer";
 
 const SignOutPage = ({ props }) => {
   const [showModel, setShowModel] = useState(true);
+
   return (
     <div className="w-screen ">
       <div className="">
@@ -43,7 +44,7 @@ const SignOutPage = ({ props }) => {
         </div>
       </div>
       <div className="w-screen bg-green-500 mx-auto border-[1px] border-[#141414] my-4"></div>
-      {showModel ? <Model setShowModel={setShowModel} /> : <Compose />}
+      {showModel ? <Model setShowModel={setShowModel} /> : <Compose email={props.user.email} />}
       <Footer />
     </div>
   );

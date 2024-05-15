@@ -3,16 +3,17 @@ import axios from "axios";
 import { useState } from "react";
 import Loader from "./Loader";
 
-export default function Compose() {
+export default function Compose({ email }) {
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState(" ");
   const [formData, setFormData] = useState({
-    email: "",
+    email: email,
     password: "",
     subject: "",
     body: "",
     file: null,
   });
+
   const handleChange = (e) => {
     if (e.target.type === "file") {
       setFormData({ ...formData, [e.target.name]: e.target.files[0] });
@@ -64,7 +65,7 @@ export default function Compose() {
           <h1 className="text-3xl font-semibold">Send Bulk Email</h1>
           <input
             className="text-1xl  bg-[#141414] p-2 rounded-md border-none"
-            value={formData.email}
+            value={email}
             name="email"
             onChange={handleChange}
             type="email"
